@@ -1,5 +1,5 @@
 const Manbo = require('manbo')
-const {InteractionCollector} = require('manbo')
+const {InteractionCollector} = require('manbo-collector')
 
 // eslint-disable-next-line no-unused-vars
 const ManboDebugger = require('../')
@@ -182,7 +182,7 @@ module.exports = class ProcessManager {
         this.messageComponentCollector.stop()
     }
 
-    genText() {       
+    genText() {
         return this.options.noCode && this.splitted.length < 2 ? `${this.splitted[this.page - 1]}` : `${codeBlock.construct(this.splitted[this.page - 1], this.options.lang)}\n\nPage ${this.page}/${this.splitted.length}`
     }
 

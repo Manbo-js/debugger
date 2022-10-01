@@ -1,4 +1,5 @@
 declare module 'manbo-debugger' {
+  // @ts-ignore
   import * as Manbo from 'manbo'
   export default ManboDebugger
 
