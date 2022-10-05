@@ -20,7 +20,7 @@ module.exports = async function Exec (message, parent) {
       messageReference: { messageID: message.id }
     })
   }, 180000)
-  console.log(res.pid)
+  console.log(`Executed in PID ${res.pid}`)
 
   await msg.addAction([
     {
